@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BraaiJapie – Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: url('/attachments/s8FPeiNpfiVktKmm4nUPV.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      backdrop-filter: brightness(0.7);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    p {
+      max-width: 700px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    form {
+      margin-top: 20px;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 25px;
+      border-radius: 8px;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #cc0000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a30000;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coming Soon</h1>
+  <p>
+    Regardless if you are a <strong>StadsJapie</strong> or <strong>PlaasJapie</strong>, we all love to <strong>Braai</strong> — so why not a <strong>BraaiJapie</strong>?<br><br>
+    United around the fire, with a steak or tjoppie on the braai. A drink to motivate you and quality utensils to experience Braai how it was intended.
+  </p>
+
+  <form id="notifyForm">
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button type="submit">Notify Me</button>
+  </form>
+
+  <footer>© 2026 BraaiJapie</footer>
+
+  <script>
+    document.getElementById('notifyForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const mailtoLink = "mailto:gertj@nzen.co.za"
+        + "?subject=BraaiJapie Notify Me Request"
+        + "&body=Please notify me when BraaiJapie launches.%0D%0A%0D%0AUser email: " + encodeURIComponent(email);
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>
